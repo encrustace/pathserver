@@ -7,12 +7,11 @@ const router = express.Router();
 router.get('/auth', (req, res) => {
     var email = req.query.email;
     var pass = req.query.pass;
-    mysqlConnection.query(`SELECT * FROM pathology WHERE email = '${email}' AND pass = '${pass}'`, (err, rows, fields) => {
+    mysqlConnection.query(`SELECT * FROM pathology WHERE path_email = '${email}' AND path_pass = '${pass}'`, (err, rows, fields) => {
         if (err) {
             console.log(err);
         } else {
             res.send(rows);
-            console.log(rows);
         }
         res.end();
     });

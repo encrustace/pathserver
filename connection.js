@@ -1,11 +1,12 @@
 import mysql from 'mysql';
 
 const mysqlConnection = mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : '96@Linux',
-    database : 'pathsoft',
-    multipleStatements : true
+    host : 'remotemysql.com',
+    user : 'XisFbkBe84',
+    password : 'tZ7F9NS8tZ',
+    database : 'XisFbkBe84',
+    multipleStatements : true,
+    port : 3306
 });
 
 mysqlConnection.connect((err) => {
